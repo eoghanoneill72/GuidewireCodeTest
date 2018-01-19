@@ -22,22 +22,22 @@ public class CodeTestExerciseCollectionOfCollectionsIteratorTest extends TestCas
 	}
 	
 	/**
+	 * Not completed correctly
 	 * inner singleton test - test that a collection of singleton inner collections are iterated correctly
 	 */
-	public void InnerSingletonTest() {
-		String[][] contents = {{"1"},{"2"},{"3"}};
-		Collection<Collection<Object>> collection = createCollections(contents);
-		StringBuilder sb = null;
-		for(Collection<Object> s: collection) {
-			sb.append(s);
-		}
-		String s1 = sb.toString();
-		assertEquals(s1,"123");
-	}
-	
-	/**
-	 * outer singleton test - test that a singleton outer collection is iterated correctly
-	 */
+//	public void InnerSingletonTest() {
+//		String[][] contents = {{"ab"},{"c"},{"def"}};
+//		Collection<Collection<Object>> collection = createCollections(contents);
+//		
+//		StringBuilder sb = new StringBuilder();
+//		
+//		while(collection.hasNext()){
+//			sb.append((String)collection.next();
+//		    }
+//
+//		String s1 = sb.toString();
+//		assertEquals(s1,"abcdef");
+//	}
 
 
 	/**

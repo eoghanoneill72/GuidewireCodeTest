@@ -6,17 +6,26 @@ import java.io.FileReader;
 import java.io.IOException;
 
 
-public class CodeTestExerciseBadCode {
+/**
+ * List Observations
+ * File path not suitable for windows
+ * Uninformative variable names
+ * Uninformative Exception Thrown
+ * try-with_resources auto closes
+ */
 
-	public CodeTestExerciseBadCode(){
+
+public class ReadFileFixed {
+
+	public ReadFileFixed(){
 		
 	}
 	/**
 	 * @param args
-	 * Takes text file "c:/samplefile.txt" and prints to standard output 
+	 * Takes text file "C:/samplefile.txt" and prints to standard output 
 	 */
 	public static void main(String[] args) {
-		CodeTestExerciseBadCode part2 = new CodeTestExerciseBadCode();
+		ReadFileFixed part2 = new ReadFileFixed();
 		System.out.println(part2.readFile());		
 	}
 
@@ -60,12 +69,3 @@ public class CodeTestExerciseBadCode {
 		return content.toString();
 	}
 }
-
-/**
- * List Observations
- * File path not suitable for windows
- * Uninformative variabel names
- * Uninformative Exception
- */
- 
-  

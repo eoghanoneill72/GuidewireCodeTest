@@ -26,14 +26,12 @@ public class CodeTestCollectionOfCollectionsIteratorTrial {
 	    System.out.println(nestedList);
 
 	    @SuppressWarnings("rawtypes")
-		CodeTestExerciseCollectionOfCollectionsIterator cc = new CodeTestExerciseCollectionOfCollectionsIterator(nestedList);
+		CodeTestExerciseCollectionOfCollectionsIterator nestedCollection = new CodeTestExerciseCollectionOfCollectionsIterator(nestedList);
 
-	    while(cc.hasNext()){
-	        System.out.println(cc.next());
+	    while(nestedCollection.hasNext()){
+	        System.out.println(nestedCollection.next());
 	    }
 	    
-
-		
 	}
 
 }
