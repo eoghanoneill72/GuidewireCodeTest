@@ -12,7 +12,7 @@ public class CodeTestExerciseCollectionOfCollectionsIterator<E> implements Itera
 	private Collection<Collection<E>> _collOfColl = null;
 	
 	private Iterator<Collection<E>> outerIterator;
-	private Iterator<E> innerIterator;
+	private Iterator<E> innerIterator = null;
 	private E next;
 	
 	
@@ -28,14 +28,27 @@ public class CodeTestExerciseCollectionOfCollectionsIterator<E> implements Itera
 	
 	/**
 	 * Returns true if the iteration has more elements
+	 * 
 	 */
 	public boolean hasNext() {
 		if(outerIterator.hasNext()) {
-			innerIterator = outerIterator.next().iterator();
-			if(innerIterator != null || innerIterator.hasNext()) {
+			//create new iterator for inner collection
+			//if the inner iterator doesn't exist yet create one
+			if (innerIterator == null) {
+				System.out.println("inner iterator null therefore create one");
+				innerIterator = outerIterator.next().iterator();
+			}
+			//otherwise an inner iterator already exists, see if it has next
+			
+			//if the inner collection is not empty
+			if(innerIterator.hasNext()) {
+//			if(innerIterator != null || innerIterator.hasNext()) {
 				//update next field
 				next = innerIterator.next();
 				return true;
+			}else {
+				//inner iterator is exhausted
+				innerIterator = null;
 			}
 		}
 		return false;
