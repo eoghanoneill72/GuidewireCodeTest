@@ -35,7 +35,6 @@ public class CodeTestExerciseCollectionOfCollectionsIterator<E> implements Itera
 			if(innerIterator != null || innerIterator.hasNext()) {
 				//update next field
 				next = innerIterator.next();
-				System.out.println(next);
 				return true;
 			}
 		}
