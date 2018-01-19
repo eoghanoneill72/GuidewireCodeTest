@@ -20,6 +20,24 @@ public class CodeTestExerciseCollectionOfCollectionsIteratorTest extends TestCas
 		Collection<Collection<Object>> collection = createCollections(contents);
 		assertTrue(!new CodeTestExerciseCollectionOfCollectionsIterator(collection).hasNext());
 	}
+	
+	/**
+	 * inner singleton test - test that a collection of singleton inner collections are iterated correctly
+	 */
+	public void InnerSingletonTest() {
+		String[][] contents = {{"1"},{"2"},{"3"}};
+		Collection<Collection<Object>> collection = createCollections(contents);
+		StringBuilder sb = null;
+		for(Collection<Object> s: collection) {
+			sb.append(s);
+		}
+		String s1 = sb.toString();
+		assertEquals(s1,"123");
+	}
+	
+	/**
+	 * outer singleton test - test that a singleton outer collection is iterated correctly
+	 */
 
 
 	/**

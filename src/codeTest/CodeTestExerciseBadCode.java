@@ -21,8 +21,10 @@ public class CodeTestExerciseBadCode {
 		File f = null;
 		FileReader fr = null;
 		StringBuffer content = null;
+		
 		try{
-			f = new File("c:/samplefile.txt");
+//			f = new File("c:/samplefile.txt");
+			f = new File("c:\\samplefile.txt");
 			fr = new FileReader(f);
 			
 			int c;			
