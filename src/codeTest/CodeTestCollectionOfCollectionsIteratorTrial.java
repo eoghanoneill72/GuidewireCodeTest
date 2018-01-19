@@ -6,24 +6,27 @@ public class CodeTestCollectionOfCollectionsIteratorTrial {
 
 	public static void main(String[] args) {
 		
-		List<List<String>> Nestedlist = new ArrayList<List<String>>();
-	    List<String> l = new ArrayList<String>();
-	    l.add("1");
-	    l.add("2");
-	    Nestedlist.add(l);
-	    l = new ArrayList<String>();
-	    l.add("3");
-	    l.add("4");
-	    Nestedlist.add(l);
-	    l = new ArrayList<String>();
-	    l.add("5");
-	    l.add("6");
-	    Nestedlist.add(l);
+		List<List<String>> nestedList = new ArrayList<List<String>>();
+		
+	    List<String> tempList = new ArrayList<String>();
+	    tempList.add("a");
+	    tempList.add("b");
+	    nestedList.add(tempList);
 	    
-	    System.out.println(Nestedlist);
+	    tempList = new ArrayList<String>();
+	    tempList.add("c");
+	    nestedList.add(tempList);
+	    
+	    tempList = new ArrayList<String>();
+	    tempList.add("d");
+	    tempList.add("e");
+	    tempList.add("f");
+	    nestedList.add(tempList);
+	    
+	    System.out.println(nestedList);
 
 	    @SuppressWarnings("rawtypes")
-		CodeTestExerciseCollectionOfCollectionsIterator cc = new CodeTestExerciseCollectionOfCollectionsIterator(Nestedlist);
+		CodeTestExerciseCollectionOfCollectionsIterator cc = new CodeTestExerciseCollectionOfCollectionsIterator(nestedList);
 
 	    while(cc.hasNext()){
 	        System.out.println(cc.next());
