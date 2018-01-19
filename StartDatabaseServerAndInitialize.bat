@@ -1,0 +1,1 @@
+java -cp lib/h2.jar;lib/commons-cli-1.1.jar;lib/database.jar com.gwservices.interview.h2.ServerInitializer -scriptsDirectory scripts -userName sa -startAndInitialize -baseDir ./databaseFiles
